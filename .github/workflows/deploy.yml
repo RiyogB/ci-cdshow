@@ -1,0 +1,22 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  
+
+      - name: Copy Files to Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.server_host }}
+          username: ${{ secrets.server_user }}
+          key: ${{ secrets.server_key }}
+          source: "."   
+          target: "/usr/share/nginx/www/"
