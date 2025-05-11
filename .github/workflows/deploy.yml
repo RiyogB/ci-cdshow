@@ -15,8 +15,8 @@ jobs:
       - name: Copy Files to Server
         uses: appleboy/scp-action@v0.1.7
         with:
-          host: ${{ secrets.server_host }}
-          username: ${{ secrets.server_user }}
-          key: ${{ secrets.server_key }}
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.PRIVATE_KEY }}
           source: "."   
           target: "/usr/share/nginx/www/"
