@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.PRIVATE_KEY }}
           source: "."   
-          target: "/usr/share/nginx/www/"
+          target: "/usr/share/nginx/html/"
