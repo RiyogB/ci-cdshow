@@ -3,7 +3,7 @@
 $env = isset($_GET['env']) ? $_GET['env'] : 'default';
 
 // Default background color
-$backgroundColor = "#ffffff";  // Default is white
+$backgroundColor = "#0a1c4e";  // Default is white
 
 // Set the color based on the 'env' query parameter
 if ($env == "development") {
